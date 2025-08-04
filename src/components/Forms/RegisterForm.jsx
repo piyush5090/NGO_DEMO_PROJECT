@@ -13,7 +13,7 @@ function RegisterForm({setFormVisible , setRefresh}) {
   const submit = async (data) => {
     try {
         console.log(data);
-      const res = await axios.post("http://localhost:5000/addRegistration", data,{ headers: {
+      const res = await axios.post("https://ngo-demo-project-2.onrender.com/addRegistration", data,{ headers: {
         "Content-Type": "multipart/form-data"
       }});
       setRefresh(prev=> !prev);

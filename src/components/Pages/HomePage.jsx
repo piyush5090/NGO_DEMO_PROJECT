@@ -17,7 +17,7 @@ function HomePage() {
   useEffect(()=>{
     const subscription = async ()  =>{
       try {
-        const allData = await axios.get("http://localhost:5000/getAllRegistrations");
+        const allData = await axios.get("https://ngo-demo-project-2.onrender.com/getAllRegistrations");
         if(allData){
           dispatch(addRegistration({ data: allData.data }));
           localStorage.setItem("allData",JSON.stringify(allData));

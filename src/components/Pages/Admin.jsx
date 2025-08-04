@@ -18,7 +18,7 @@ function Admin() {
 
   const fetchRegistrations = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/getAllRegistrations");
+      const response = await axios.get("https://ngo-demo-project-2.onrender.com/getAllRegistrations");
       if (response.data) {
         dispatch(addRegistration({ data: response.data }));
         localStorage.setItem("allData", JSON.stringify(response.data));
@@ -34,7 +34,7 @@ function Admin() {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      const res = await axios.put(`http://localhost:5000/updateStatus/${id}`, { status: newStatus });
+      const res = await axios.put(`https://ngo-demo-project-2.onrender.com/updateStatus/${id}`, { status: newStatus });
       if (res.status === 200) {
         await fetchRegistrations(); 
       }
