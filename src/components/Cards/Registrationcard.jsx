@@ -51,7 +51,7 @@ const RegistrationCard = ({ registration, onStatusChange }) => {
         {resumeURL && (
           <div className="mt-4">
             <a
-              href={`https://ngo-demo-project-2.onrender.com/${resumeURL}`}
+              href={`https://ngo-demo-project-2.onrender.com/uploads/${resumeURL}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline text-sm font-medium"
